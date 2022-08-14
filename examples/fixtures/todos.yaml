@@ -1,0 +1,22 @@
+tables:
+  todos:
+    - title: Breakfast
+      datetime: '2000-01-01 08:00:00'
+    - title: Traning
+      datetime: '2000-01-01 09:00:00'
+    - title: Work
+      datetime: '2000-01-01 09:30:00'
+    - title: Coffee break
+      datetime: '2000-01-01 12:00:00'
+    - title: Lunch
+      datetime: '2000-01-01 15:00:00'
+    - title: Going home
+      datetime: '2000-01-01 17:30:00'
+    - title: Dinner
+      datetime: '2000-01-01 18:00:00'
+    - title: Reading books
+      datetime: '2000-01-01 19:00:00'
+    - title: Meditation
+      datetime: '2000-01-01 22:00:00'
+    - title: Go to sleep
+      datetime: '2000-01-01 23:00:00'

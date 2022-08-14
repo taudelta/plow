@@ -24,6 +24,10 @@ func EnableScriptLogger() {
 	logger.SetOutput(os.Stdout)
 }
 
+func DisableScriptLogger() {
+	logger.SetOutput(io.Discard)
+}
+
 func RunCmd(timeout time.Duration, buf *bytes.Buffer, args ...string) {
 	ctx, cancel := context.WithTimeout(context.Background(), timeout)
 	defer cancel()
@@ -77,6 +81,7 @@ func execCmd(ctx context.Context, shell string, buf *bytes.Buffer, args ...strin
 
 	select {
 	case <-ctx.Done():
+		logger.Print("Process interrupted by timeout exceeded")
 		if runtime.GOOS == "windows" {
 			return cmd.Process.Kill()
 		} else if runtime.GOOS == "linux" || runtime.GOOS == "darwin" {
